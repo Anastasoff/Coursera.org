@@ -16,6 +16,14 @@
         }
     }
 
+    public int[] Id
+    {
+        get
+        {
+            return this.id;
+        }
+    }
+
     public int Count
     {
         get
