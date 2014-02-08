@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinarySearch.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="ThreeSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThreeSumDeluxe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
