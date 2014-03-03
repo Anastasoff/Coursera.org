@@ -1,6 +1,6 @@
 ﻿namespace Stacks.Static
 {
-    internal class ResizingArrayStackOfStrings : IStack
+    internal class ResizingArrayStackOfStrings : IStackOfStrings
     {
         private string[] arrayOfStrings;
         private int index;

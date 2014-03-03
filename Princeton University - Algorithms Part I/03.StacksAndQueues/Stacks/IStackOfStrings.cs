@@ -1,6 +1,6 @@
 ﻿namespace Stacks
 {
-    public interface IStack
+    public interface IStackOfStrings
     {
         void Push(string item);
 

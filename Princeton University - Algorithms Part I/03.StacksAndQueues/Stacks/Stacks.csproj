@@ -44,10 +44,13 @@
     <Compile Include="Dynamic\LinkedStackOfStrings.cs">
       <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
     </Compile>
-    <Compile Include="IStack.cs" />
+    <Compile Include="Dynamic\GenericStack.cs" />
+    <Compile Include="IGenericStack.cs" />
+    <Compile Include="IStackOfStrings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dynamic\Node.cs" />
+    <Compile Include="Static\FixedCapacityStack.cs" />
     <Compile Include="Static\FixedCapacityStackOfStrings.cs" />
     <Compile Include="Static\ResizingArrayStackOfStrings.cs" />
   </ItemGroup>

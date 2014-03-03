@@ -1,6 +1,6 @@
 ﻿namespace Stacks.Static
 {
-    public class FixedCapacityStackOfStrings : IStack
+    public class FixedCapacityStackOfStrings : IStackOfStrings
     {
         private string[] arrayOfStrings;
         private int index;

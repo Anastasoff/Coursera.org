@@ -2,9 +2,9 @@
 {
     using Stacks.Dynamic;
 
-    public class LinkedStackOfStrings : IStack
+    public class LinkedStackOfStrings : IStackOfStrings
     {
-        private Node first = null;
+        private Node first;
 
         public bool IsEmpty()
         {
