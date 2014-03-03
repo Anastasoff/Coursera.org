@@ -8,6 +8,7 @@
         public FixedCapacityStackOfStrings(int capacity)
         {
             this.arrayOfStrings = new string[capacity];
+            this.index = 0;
         }
 
         public bool IsEmpty()

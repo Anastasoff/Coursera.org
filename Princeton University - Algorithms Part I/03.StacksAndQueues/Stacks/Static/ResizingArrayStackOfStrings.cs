@@ -8,6 +8,7 @@
         public ResizingArrayStackOfStrings()
         {
             this.arrayOfStrings = new string[4];
+            this.index = 0;
         }
 
         public bool IsEmpty()

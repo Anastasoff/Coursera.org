@@ -1,7 +1,5 @@
 ﻿namespace Stacks.Dynamic
 {
-    using Stacks.Dynamic;
-
     public class LinkedStackOfStrings : IStackOfStrings
     {
         private Node first;

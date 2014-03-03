@@ -1,12 +1,31 @@
 ﻿namespace Stacks.Static
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
-    class FixedCapacityStack<T> : IGenericStack
+    public class FixedCapacityStack<T> : IGenericStack<T>
     {
+        private T[] array;
+        private int index;
+
+        public FixedCapacityStack(int capacity)
+        {
+            this.array = new T[capacity];
+            this.index = 0;
+        }
+
+        public bool IsEmpty()
+        {
+            return this.index == 0;
+        }
+
+        public void Push(T item)
+        {
+            this.array[this.index++] = item;
+        }
+
+        public T Pop()
+        {
+            return this.array[--this.index];
+        }
     }
 }

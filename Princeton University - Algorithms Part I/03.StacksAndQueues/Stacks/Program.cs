@@ -1,11 +1,10 @@
 ﻿namespace Stacks
 {
+    using Stacks.Dynamic;
+    using Stacks.Static;
     using System;
     using System.IO;
     using System.Text;
-
-    using Stacks.Dynamic;
-    using Stacks.Static;
 
     internal class Program
     {
@@ -14,7 +13,9 @@
             TestClient(new LinkedStackOfStrings());
             TestClient(new FixedCapacityStackOfStrings(10));
             TestClient(new ResizingArrayStackOfStrings());
-            TestGenericsClient(new GenericStack<string>());
+            var stack = new GenericStack<string>();
+            TestGenericsClient(stack);
+            Console.WriteLine("(\"{0}\" left on stack)", stack.ToString());
         }
 
         private static void TestClient(IStackOfStrings stack)
