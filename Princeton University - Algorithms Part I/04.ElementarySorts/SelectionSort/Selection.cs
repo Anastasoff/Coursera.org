@@ -2,9 +2,9 @@
 {
     using System;
 
-    public class SelectionSort
+    public class Selection
     {
-        private SelectionSort()
+        private Selection()
         {
         }
 
