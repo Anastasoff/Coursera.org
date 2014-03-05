@@ -1,4 +1,4 @@
-﻿namespace SelectionSort
+﻿namespace Tester
 {
     using System;
 
@@ -51,7 +51,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0} {1} {2}", this.Brand, this.Model, this.Model);
+            return string.Format("{0} {1} {2}", this.Brand, this.Model, this.Year);
         }
 
         public static bool operator ==(Car firstCar, Car secondCar)
