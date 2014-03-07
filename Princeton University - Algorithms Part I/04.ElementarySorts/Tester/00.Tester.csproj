@@ -57,6 +57,10 @@
       <Project>{d8aba406-a270-4dd0-ab77-71c4813d9fa5}</Project>
       <Name>01.SelectionSort</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ShellSort\03.ShellSort.csproj">
+      <Project>{1f226119-b536-40c9-bfa6-74bde00e6d84}</Project>
+      <Name>03.ShellSort</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
