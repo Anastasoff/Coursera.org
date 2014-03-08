@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{25BCC520-B9A5-4A4C-BDF3-EBE6E90F0CCF}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{93FC4F7D-A8F1-4B5D-977C-297319362024}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tester</RootNamespace>
-    <AssemblyName>Tester</AssemblyName>
+    <RootNamespace>BubbleSort</RootNamespace>
+    <AssemblyName>BubbleSort</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,30 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="Tester.cs" />
+    <Compile Include="Bubble.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BubbleSort\04.BubbleSort.csproj">
-      <Project>{93fc4f7d-a8f1-4b5d-977c-297319362024}</Project>
-      <Name>04.BubbleSort</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InsertionSort\02.InsertionSort.csproj">
-      <Project>{4e6e6b75-cf01-4997-946d-6165c8bf241d}</Project>
-      <Name>02.InsertionSort</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SelectionSort\01.SelectionSort.csproj">
-      <Project>{d8aba406-a270-4dd0-ab77-71c4813d9fa5}</Project>
-      <Name>01.SelectionSort</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ShellSort\03.ShellSort.csproj">
-      <Project>{1f226119-b536-40c9-bfa6-74bde00e6d84}</Project>
-      <Name>03.ShellSort</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
