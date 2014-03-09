@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Shuffle
+﻿namespace Shuffle
 {
+    using System;
+
     public static class Shuffle
     {
         public static void Suffle<T>(this T[] array) where T : IComparable<T>
