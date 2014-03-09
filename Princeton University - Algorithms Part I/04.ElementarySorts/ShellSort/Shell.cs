@@ -15,7 +15,7 @@
             int h = 1;
             while (h < n / 2)
             {
-                h = 3 * h + 1;
+                h = (3 * h) + 1;
             }
 
             while (h >= 1)
