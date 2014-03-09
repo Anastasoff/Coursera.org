@@ -1,11 +1,12 @@
 ﻿namespace Tester
 {
+    using System;
+    using System.Diagnostics;
+
     using BubbleSort;
     using InsertionSort;
     using SelectionSort;
     using ShellSort;
-    using System;
-    using System.Diagnostics;
 
     internal class Tester
     {

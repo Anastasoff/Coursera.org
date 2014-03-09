@@ -17,6 +17,16 @@
 
         public int Year { get; set; }
 
+        public static bool operator ==(Car firstCar, Car secondCar)
+        {
+            return Car.Equals(firstCar, secondCar);
+        }
+
+        public static bool operator !=(Car firstCar, Car secondCar)
+        {
+            return !Car.Equals(firstCar, secondCar);
+        }
+
         public override bool Equals(object obj)
         {
             Car car = obj as Car;
@@ -52,16 +62,6 @@
         public override string ToString()
         {
             return string.Format("{0} {1} {2}", this.Brand, this.Model, this.Year);
-        }
-
-        public static bool operator ==(Car firstCar, Car secondCar)
-        {
-            return Car.Equals(firstCar, secondCar);
-        }
-
-        public static bool operator !=(Car firstCar, Car secondCar)
-        {
-            return !Car.Equals(firstCar, secondCar);
         }
 
         public int CompareTo(Car car)
