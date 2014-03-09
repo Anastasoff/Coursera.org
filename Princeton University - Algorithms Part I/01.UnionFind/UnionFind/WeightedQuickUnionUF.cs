@@ -1,4 +1,11 @@
-﻿public class WeightedQuickUnionUF
+﻿/// <summary>
+/// The WeightedQuickUnionUF class represents a union-find data structure.
+/// It supports the union and find operations, along with methods for determining whether two objects are in the same component and the total number of components.
+/// This implementation uses weighted quick union by size (without path compression).
+/// Initializing a data structure with N objects takes linear time.
+/// Afterwards, union, find, and connected take logarithmic time (in the worst case) and count takes constant time.
+/// </summary>
+public class WeightedQuickUnionUF
 {
     private int[] id;
     private int[] sz;

@@ -1,4 +1,9 @@
-﻿public class QuickFindUF
+﻿/// <summary>
+/// The QuickFindUF class represents a union-find data structure. 
+/// It supports the union and find operations, along with methods for determining whether two objects are in the same component and the total number of components. 
+/// This implementation uses quick find. Initializing a data structure with N objects takes linear time. Afterwards, find, connected, and count takes constant time but union takes linear time.
+/// </summary>
+public class QuickFindUF
 {
     private int[] id;
 
