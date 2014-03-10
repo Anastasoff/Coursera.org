@@ -47,6 +47,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Quicksort\01.Quicksort.csproj">
+      <Project>{b96b02a0-d2c6-4990-ab99-4e99d11d583a}</Project>
+      <Name>01.Quicksort</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shuffle\02.Shuffle.csproj">
+      <Project>{73ba46f8-dc4d-4216-8210-be6c388cd576}</Project>
+      <Name>02.Shuffle</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
