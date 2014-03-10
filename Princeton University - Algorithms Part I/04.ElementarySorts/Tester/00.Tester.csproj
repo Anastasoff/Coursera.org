@@ -53,6 +53,10 @@
       <Project>{93fc4f7d-a8f1-4b5d-977c-297319362024}</Project>
       <Name>04.BubbleSort</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GrahamScan\06.GrahamScan.csproj">
+      <Project>{b10b8cba-bbd1-4b16-b9c8-92ab83185e84}</Project>
+      <Name>06.GrahamScan</Name>
+    </ProjectReference>
     <ProjectReference Include="..\InsertionSort\02.InsertionSort.csproj">
       <Project>{4e6e6b75-cf01-4997-946d-6165c8bf241d}</Project>
       <Name>02.InsertionSort</Name>
@@ -64,6 +68,10 @@
     <ProjectReference Include="..\ShellSort\03.ShellSort.csproj">
       <Project>{1f226119-b536-40c9-bfa6-74bde00e6d84}</Project>
       <Name>03.ShellSort</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shuffle\05.Shuffle.csproj">
+      <Project>{73ba46f8-dc4d-4216-8210-be6c388cd576}</Project>
+      <Name>05.Shuffle</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

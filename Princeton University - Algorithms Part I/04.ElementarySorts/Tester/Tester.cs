@@ -7,6 +7,7 @@
     using InsertionSort;
     using SelectionSort;
     using ShellSort;
+    using Shuffle;
 
     internal class Tester
     {
@@ -17,7 +18,8 @@
             InsertionXSort();
             ShellSort();
             BubbleSort();
-
+            Shuffle();
+            
             PerformanceTestSelectionSort();
             PerformanceTestInsertionSort();
             PerformanceTestInsertionXSort();
@@ -258,6 +260,23 @@
                 Console.WriteLine("-> " + car);
             }
 
+            Console.WriteLine(" - = end = - \n");
+        }
+
+        private static void Shuffle()
+        {
+            Console.WriteLine("Shuffle:");
+            int size = 20;
+            int[] array = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = i;
+            }
+
+            Console.WriteLine("    Array: {0}", string.Join(", ", array));
+
+            array.Shuffle();
+            Console.WriteLine(" Shuffled: {0}", string.Join(", ", array));
             Console.WriteLine(" - = end = - \n");
         }
 
