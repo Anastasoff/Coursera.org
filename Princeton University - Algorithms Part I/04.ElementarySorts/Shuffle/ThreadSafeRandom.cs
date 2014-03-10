@@ -6,11 +6,19 @@
     public static class ThreadSafeRandom
     {
         [ThreadStatic]
-        private static Random Local;
+        private static Random instance;
 
         public static Random ThisThreadsRandom
         {
-            get { return Local ?? (Local = new Random(unchecked(Environment.TickCount * 31 + Thread.CurrentThread.ManagedThreadId))); }
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Random(unchecked((Environment.TickCount * 31) + Thread.CurrentThread.ManagedThreadId));
+                }
+
+                return instance;
+            }
         }
     }
 }
