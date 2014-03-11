@@ -1,17 +1,19 @@
 ﻿namespace Tester
 {
-    using System;
-    using Shuffle;
     using Quicksort;
+    using Shuffle;
+    using System;
     using System.Diagnostics;
+
     public class Tester
     {
-        private const int SIZE = 1000;
+        private const int SIZE = 1000000;
 
         public static void Main()
         {
             PerformanceTestBuildInSort();
             PerformanceTestQuicksort();
+            PerformanceTestQuickXsort();
         }
 
         private static int[] ShuffledArray()
@@ -26,7 +28,6 @@
 
             return array;
         }
-
 
         /// <summary>
         /// Check if array is sorted - useful for debugging
@@ -64,6 +65,18 @@
             stopwatch.Stop();
             Console.WriteLine("Time taken: {0}ms;", stopwatch.Elapsed.TotalMilliseconds);
             Console.WriteLine("IsSorted: {0}", IsSorted(quicksortArray));
+            Console.WriteLine("- = end = - \n");
+        }
+
+        private static void PerformanceTestQuickXsort()
+        {
+            int[] quickXsortArray = ShuffledArray();
+            Console.WriteLine("QuickX sort:");
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            Quick.Sort(quickXsortArray);
+            stopwatch.Stop();
+            Console.WriteLine("Time taken: {0}ms;", stopwatch.Elapsed.TotalMilliseconds);
+            Console.WriteLine("IsSorted: {0}", IsSorted(quickXsortArray));
             Console.WriteLine("- = end = - \n");
         }
     }
