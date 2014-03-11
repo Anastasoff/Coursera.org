@@ -1,9 +1,10 @@
 ﻿namespace Tester
 {
-    using Quicksort;
-    using Shuffle;
     using System;
     using System.Diagnostics;
+
+    using Quicksort;
+    using Shuffle;
 
     public class Tester
     {
@@ -13,9 +14,14 @@
         {
             PerformanceTestBuildInSort();
             PerformanceTestQuicksort();
+            PerformanceTestQuick3waysort();
             PerformanceTestQuickXsort();
         }
 
+        /// <summary>
+        /// Initialize array[SIZE] and shuffles its values.
+        /// </summary>
+        /// <returns>Shuffled integer array</returns>
         private static int[] ShuffledArray()
         {
             int[] array = new int[SIZE];
@@ -65,6 +71,18 @@
             stopwatch.Stop();
             Console.WriteLine("Time taken: {0}ms;", stopwatch.Elapsed.TotalMilliseconds);
             Console.WriteLine("IsSorted: {0}", IsSorted(quicksortArray));
+            Console.WriteLine("- = end = - \n");
+        }
+
+        private static void PerformanceTestQuick3waysort()
+        {
+            int[] quick3waysortArray = ShuffledArray();
+            Console.WriteLine("Quick3way sort:");
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            Quick.Sort(quick3waysortArray);
+            stopwatch.Stop();
+            Console.WriteLine("Time taken: {0}ms;", stopwatch.Elapsed.TotalMilliseconds);
+            Console.WriteLine("IsSorted: {0}", IsSorted(quick3waysortArray));
             Console.WriteLine("- = end = - \n");
         }
 
