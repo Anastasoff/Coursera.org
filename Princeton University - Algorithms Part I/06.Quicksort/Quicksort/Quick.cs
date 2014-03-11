@@ -1,7 +1,7 @@
 ﻿namespace Quicksort
 {
-    using Shuffle;
     using System;
+    using Shuffle;
 
     /// <summary>
     /// The Quick class provides static methods for sorting an array and selecting the ith smallest element in an array using quicksort.

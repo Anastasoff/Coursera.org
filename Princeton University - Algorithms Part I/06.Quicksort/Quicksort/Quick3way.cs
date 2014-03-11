@@ -24,7 +24,7 @@
         }
 
         // quicksort the subarray array[low ... high] using 3-way partitioning
-        private static void Sort<T>(T[] array, int low, int high) where T:IComparable<T>
+        private static void Sort<T>(T[] array, int low, int high) where T : IComparable<T>
         {
             if (high <= low)
             {
@@ -57,7 +57,7 @@
             Sort(array, gt + 1, high);
         }
 
-        private static void Swap<T>(T[] array, int a, int b) where T:IComparable<T>
+        private static void Swap<T>(T[] array, int a, int b) where T : IComparable<T>
         {
             T swap = array[a];
             array[a] = array[b];

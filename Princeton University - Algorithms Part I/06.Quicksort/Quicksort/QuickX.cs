@@ -41,7 +41,7 @@
             else
             {
                 int eps = n / 8;
-                int mid = low + n / 2;
+                int mid = low + (n / 2);
                 int m1 = MediadThree(array, low, low + eps, low + eps + eps);
                 int m2 = MediadThree(array, mid - eps, mid, mid + eps);
                 int m3 = MediadThree(array, high - eps - eps, high - eps, high);
