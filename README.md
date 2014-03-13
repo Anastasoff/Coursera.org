@@ -18,6 +18,8 @@ Coursera.org
   - [ResizingArrayStackOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Static/ResizingArrayStackOfStrings.cs)
   - [LinkedStackOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Dynamic/LinkedStackOfStrings.cs)
   - [GenericStack] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Dynamic/GenericStack.cs)
+  - [LinkedQueueOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Queues/LinkedQueueOfStrings.cs)
 4. <b>[Elementary Sorts] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/04.ElementarySorts)</b>
+  - 
 5. <b>[Mergesort] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/05.MergeSort)</b>
 6. <b>[Quicksort] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort)</b>
