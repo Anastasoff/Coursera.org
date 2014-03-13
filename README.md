@@ -13,6 +13,11 @@ Coursera.org
   - [ThreeSum] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/02.AnalysisOfAlgorithms/AnalysisOfAlgorithms/ThreeSum.cs)
   - [ThreeSumDeluxe] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/02.AnalysisOfAlgorithms/AnalysisOfAlgorithms/ThreeSumDeluxe.cs)
 3. <b>[Stacks and Queues] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues)</b>
+  - [FixedCapacityStack] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Static/FixedCapacityStack.cs)
+  - [FixedCapacityStackOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Static/FixedCapacityStackOfStrings.cs)
+  - [ResizingArrayStackOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Static/ResizingArrayStackOfStrings.cs)
+  - [LinkedStackOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Dynamic/LinkedStackOfStrings.cs)
+  - [GenericStack] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Dynamic/GenericStack.cs)
 4. <b>[Elementary Sorts] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/04.ElementarySorts)</b>
 5. <b>[Mergesort] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/05.MergeSort)</b>
 6. <b>[Quicksort] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort)</b>
