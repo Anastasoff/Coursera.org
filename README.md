@@ -30,3 +30,6 @@ Coursera.org
   - [MergeXsort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/05.MergeSort/MergeSort/MergeX.cs)
   - [MergeBUsort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/05.MergeSort/MergeSort/MergeBU.cs)
 6. <b>[Quicksort] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort)</b>
+  - [Quicksort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort/Quicksort/Quick.cs)
+  - [QuickXsort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort/Quicksort/QuickX.cs)
+  - [Quick3waysort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort/Quicksort/Quick3way.cs)
