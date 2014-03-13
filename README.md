@@ -13,9 +13,9 @@ Coursera.org
   - [ThreeSum] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/02.AnalysisOfAlgorithms/AnalysisOfAlgorithms/ThreeSum.cs)
   - [ThreeSumDeluxe] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/02.AnalysisOfAlgorithms/AnalysisOfAlgorithms/ThreeSumDeluxe.cs)
 3. <b>[Stacks and Queues] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues)</b>
-  - [FixedCapacityStack] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Static/FixedCapacityStack.cs)
   - [FixedCapacityStackOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Static/FixedCapacityStackOfStrings.cs)
   - [ResizingArrayStackOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Static/ResizingArrayStackOfStrings.cs)
+  - [FixedCapacityStack] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Static/FixedCapacityStack.cs)
   - [LinkedStackOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Dynamic/LinkedStackOfStrings.cs)
   - [GenericStack] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Dynamic/GenericStack.cs)
   - [LinkedQueueOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Queues/LinkedQueueOfStrings.cs)
