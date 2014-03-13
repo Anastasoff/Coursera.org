@@ -20,6 +20,10 @@ Coursera.org
   - [GenericStack] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Stacks/Dynamic/GenericStack.cs)
   - [LinkedQueueOfStrings] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/03.StacksAndQueues/Queues/LinkedQueueOfStrings.cs)
 4. <b>[Elementary Sorts] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/04.ElementarySorts)</b>
-  - 
+  - [Selection sort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/04.ElementarySorts/SelectionSort/Selection.cs)
+  - [Insertion sort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/04.ElementarySorts/InsertionSort/Insertion.cs)
+  - [InsertionX sort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/04.ElementarySorts/InsertionSort/InsertionX.cs)
+  - [Shell sort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/04.ElementarySorts/ShellSort/Shell.cs)
+  - [Bubble sort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/04.ElementarySorts/BubbleSort/Bubble.cs)
 5. <b>[Mergesort] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/05.MergeSort)</b>
 6. <b>[Quicksort] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort)</b>
