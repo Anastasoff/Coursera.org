@@ -19,7 +19,7 @@
         public static void Sort<T>(T[] pq) where T : IComparable<T>
         {
             int n = pq.Length;
-            for (int k = n / 2; k >= 1; k--)
+            for (int k = n / 2; k >= 1; k--) // !
             {
                 Sink(pq, k, n);
             }
@@ -51,11 +51,11 @@
             }
         }
 
-        private static void Swap<T>(T[] array, int a, int b) where T : IComparable<T>
+        private static void Swap<T>(T[] array, int i, int j) where T : IComparable<T>
         {
-            T swap = array[a];
-            array[a] = array[b];
-            array[b] = swap;
+            T swap = array[i - 1];
+            array[i - 1] = array[j - 1];
+            array[j - 1] = swap;
         }
 
         private static bool Less<T>(T[] array, int i, int j) where T : IComparable<T>
