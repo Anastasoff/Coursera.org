@@ -9,13 +9,13 @@
         private MaxPQ<int> pq;
 
         [TestMethod]
-        public void TestInitialize()
+        public void TestInitializeMaxPQ()
         {
             this.pq = new MaxPQ<int>();
         }
 
         [TestMethod]
-        public void TestPeekShouldReturnMinimumItem()
+        public void TestDeleteMax()
         {
             this.pq = new MaxPQ<int>();
             this.pq.Insert(2);
@@ -23,6 +23,5 @@
 
             Assert.AreNotEqual(this.pq.DeleteMax(), this.pq.DeleteMax());
         }
-
     }
 }

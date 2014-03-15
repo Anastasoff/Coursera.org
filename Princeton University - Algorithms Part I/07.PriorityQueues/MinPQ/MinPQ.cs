@@ -10,8 +10,8 @@
     public class MinPQ<Key> : IEnumerable<Key> where Key : IComparable<Key>
     {
         private Key[] pq;                    // store items at indexes 1 to N
-        private int n;                       //number of items on priority queue
-        private IComparable<Key> comparator; //optional Comparator
+        private int n;                       // number of items on priority queue
+        private IComparable<Key> comparator; // optional Comparator
 
         /// <summary>
         /// Initializes an empty priority queue with the given initial capacity.
@@ -19,7 +19,7 @@
         /// <param name="initCapacity">The initial capacity of the priority queue.</param>
         public MinPQ(int initCapacity)
         {
-            pq = new Key[initCapacity + 1];
+            this.pq = new Key[initCapacity + 1];
             this.n = 0;
         }
 
@@ -67,7 +67,7 @@
 
             for (int k = this.n / 2; k >= 1; k--)
             {
-                Sink(k);
+                this.Sink(k);
             }
         }
 
@@ -179,9 +179,9 @@
 
         private void Swim(int k)
         {
-            while (k > 1 && Greater(k / 2, k))
+            while (k > 1 && this.Greater(k / 2, k))
             {
-                Swap(k, k / 2);
+                this.Swap(k, k / 2);
                 k = k / 2;
             }
         }
@@ -191,17 +191,17 @@
             while (2 * k <= this.n)
             {
                 int j = 2 * k;
-                if (j < this.n && Greater(j, j + 1))
+                if (j < this.n && this.Greater(j, j + 1))
                 {
                     j++;
                 }
 
-                if (!Greater(k, j))
+                if (!this.Greater(k, j))
                 {
                     break;
                 }
 
-                Swap(k, j);
+                this.Swap(k, j);
                 k = j;
             }
         }
@@ -225,9 +225,9 @@
 
         private void Swap(int i, int j)
         {
-            Key swap = pq[i];
-            pq[i] = pq[j];
-            pq[j] = swap;
+            Key swap = this.pq[i];
+            this.pq[i] = this.pq[j];
+            this.pq[j] = swap;
         }
 
         #endregion Helper functions for compares and swaps.
