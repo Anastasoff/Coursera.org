@@ -33,3 +33,4 @@ Coursera.org
   - [Quicksort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort/Quicksort/Quick.cs)
   - [QuickXsort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort/Quicksort/QuickX.cs)
   - [Quick3waysort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/06.Quicksort/Quicksort/Quick3way.cs)
+7. <b>[Priority Queues] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/07.PriorityQueues)</b>
