@@ -3,7 +3,7 @@
     using System;
 
     /// <summary>
-    /// The Heap class provides a static methods for heapsorting an array.
+    /// The Heap class provides a static methods for heap sorting an array.
     /// </summary>
     public class Heap
     {
@@ -15,11 +15,11 @@
         /// <summary>
         /// Rearranges the array in ascending order, using the natural order.
         /// </summary>
-        /// <param name="array">The array to be sorted</param>
+        /// <param name="array">The array to be sorted.</param>
         public static void Sort<T>(T[] pq) where T : IComparable<T>
         {
             int n = pq.Length;
-            for (int k = n / 2; k >= 1; k--) // !
+            for (int k = n / 2; k >= 1; k--)
             {
                 Sink(pq, k, n);
             }
@@ -60,12 +60,7 @@
 
         private static bool Less<T>(T[] array, int i, int j) where T : IComparable<T>
         {
-            return (array[i - 1].CompareTo(array[j - 1]) < 0);
-        }
-
-        private static bool Less<T>(T v, T w) where T : IComparable<T>
-        {
-            return (v.CompareTo(w) < 0);
+            return array[i - 1].CompareTo(array[j - 1]) < 0;
         }
     }
 }
