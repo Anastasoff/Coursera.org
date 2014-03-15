@@ -1,11 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using HeapSort;
 
-namespace UnitTest.HeapSort
+namespace HeapSort.Tests
 {
     [TestClass]
-    public class TestHeap
+    public class HeapTest
     {
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UnitTest.HeapSort")]
+[assembly: AssemblyTitle("HeapSort.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("UnitTest.HeapSort")]
+[assembly: AssemblyProduct("HeapSort.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6637e88b-b34e-440b-bee1-14af8a5cfd9d")]
+[assembly: Guid("ea1d2bbd-caa1-4dd7-9d25-f3ce4f72b1ee")]
 
 // Version information for an assembly consists of the following four values:
 //
