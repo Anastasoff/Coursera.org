@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.MaxPQ.Tests", "MaxPQ.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PriorityQueue", "PriorityQueue\03.PriorityQueue.csproj", "{7673227C-E01C-4C23-87EE-8E3A22570A7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MinPQ", "MinPQ\02.MinPQ.csproj", "{0357ECFB-8E32-4583-80C5-C942EEB1A476}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7673227C-E01C-4C23-87EE-8E3A22570A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7673227C-E01C-4C23-87EE-8E3A22570A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7673227C-E01C-4C23-87EE-8E3A22570A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0357ECFB-8E32-4583-80C5-C942EEB1A476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0357ECFB-8E32-4583-80C5-C942EEB1A476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0357ECFB-8E32-4583-80C5-C942EEB1A476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0357ECFB-8E32-4583-80C5-C942EEB1A476}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
