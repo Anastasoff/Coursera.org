@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolTables", "SymbolTables\SymbolTables.csproj", "{2FBB2981-7BE6-41C8-9C08-612E90C42051}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SymbolTables", "SymbolTables\01.SymbolTables.csproj", "{2FBB2981-7BE6-41C8-9C08-612E90C42051}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SymbolTables.Tests", "SymbolTables.Tests\01.SymbolTables.Tests.csproj", "{5F0EB583-4D5F-4AA6-8FC0-F224CF7FE9AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2FBB2981-7BE6-41C8-9C08-612E90C42051}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FBB2981-7BE6-41C8-9C08-612E90C42051}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FBB2981-7BE6-41C8-9C08-612E90C42051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F0EB583-4D5F-4AA6-8FC0-F224CF7FE9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0EB583-4D5F-4AA6-8FC0-F224CF7FE9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0EB583-4D5F-4AA6-8FC0-F224CF7FE9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0EB583-4D5F-4AA6-8FC0-F224CF7FE9AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
