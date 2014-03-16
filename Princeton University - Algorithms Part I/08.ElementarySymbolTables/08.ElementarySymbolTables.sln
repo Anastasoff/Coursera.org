@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SymbolTables", "SymbolTa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SymbolTables.Tests", "SymbolTables.Tests\01.SymbolTables.Tests.csproj", "{5F0EB583-4D5F-4AA6-8FC0-F224CF7FE9AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00.Tester", "Tester\00.Tester.csproj", "{938DA5AE-2C29-4F0F-8F46-D0D76753FBED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5F0EB583-4D5F-4AA6-8FC0-F224CF7FE9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F0EB583-4D5F-4AA6-8FC0-F224CF7FE9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F0EB583-4D5F-4AA6-8FC0-F224CF7FE9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{938DA5AE-2C29-4F0F-8F46-D0D76753FBED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938DA5AE-2C29-4F0F-8F46-D0D76753FBED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{938DA5AE-2C29-4F0F-8F46-D0D76753FBED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{938DA5AE-2C29-4F0F-8F46-D0D76753FBED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
