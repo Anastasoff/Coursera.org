@@ -11,8 +11,21 @@
 
         public static void Main()
         {
+            TestBinarySearchTree();
             TestBinarySearchST();
             TestSequentialSearchST();
+        }
+
+        public static void TestBinarySearchTree()
+        {
+            var st = new BinarySearchTree<string, int>();
+            for (int i = 0; i < Keys.Length; i++)
+            {
+                st.Put(Keys[i], i);
+            }
+
+            Console.WriteLine(">BinarySearchTree");
+            PrintOutput(st);
         }
 
         public static void TestBinarySearchST()
@@ -23,6 +36,7 @@
                 st.Put(Keys[i], i);
             }
 
+            Console.WriteLine(">BinarySearchST");
             PrintOutput(st);
         }
 
@@ -34,19 +48,25 @@
                 st.Put(Keys[i], i);
             }
 
+            Console.WriteLine(">SequentialSearchST");
             PrintOutput(st);
         }
 
         public static void PrintOutput<Key, Value>(ISymbolTable<Key, Value> st)
         {
-            Console.WriteLine("> Output <");
-            Console.WriteLine(new string('-', 10));
+            Console.Write("| Actual |");
+            Console.WriteLine("Expected|");
+            Console.WriteLine(new string('-', 19));
+            int i = 0;
             foreach (var s in st.Keys())
             {
-                Console.WriteLine("| {0} | {1,2} |", s, st.Get(s));
+                Console.Write("| {0} | {1,2} |", s, st.Get(s));
+                Console.WriteLine(" {0} | {1,2} |", ExpectedKeys[i], ExpectedValues[i]);
+                i++;
             }
 
-            Console.WriteLine(new string('#', 10));
+            Console.WriteLine(new string('#', 19));
+            Console.WriteLine();
         }
     }
 }

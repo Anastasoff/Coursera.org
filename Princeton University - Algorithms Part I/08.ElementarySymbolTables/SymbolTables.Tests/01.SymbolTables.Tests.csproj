@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BinarySearchSTTest.cs" />
+    <Compile Include="BinarySearchTreeTest.cs" />
     <Compile Include="SequentialSearchSTTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
