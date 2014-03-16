@@ -72,7 +72,7 @@
         /// </returns>
         public Value Get(Key key)
         {
-            for (Node x = first; x != null; x = x.Next)
+            for (Node x = this.first; x != null; x = x.Next)
             {
                 if (key.Equals(x.Key))
                 {
@@ -98,7 +98,7 @@
                 return;
             }
 
-            for (Node x = first; x != null; x = x.Next)
+            for (Node x = this.first; x != null; x = x.Next)
             {
                 if (key.Equals(x.Key))
                 {
@@ -107,17 +107,17 @@
                 }
             }
 
-            this.first = new Node(key, value, first);
+            this.first = new Node(key, value, this.first);
             this.n++;
         }
 
         /// <summary>
-        ///
+        /// Removes the key and associated value from the symbol table (if the key is in the symbol table).
         /// </summary>
-        /// <param name="key"></param>
+        /// <param name="key">key the key</param>
         public void Delete(Key key)
         {
-            this.first = this.Delete(first, key);
+            this.first = this.Delete(this.first, key);
         }
 
         /// <summary>

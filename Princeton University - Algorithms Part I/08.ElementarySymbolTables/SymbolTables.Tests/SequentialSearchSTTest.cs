@@ -20,7 +20,7 @@
             string[] keys = { "S", "E", "A", "R", "C", "H", "E", "X", "A", "M", "P", "L", "E" };
             for (int i = 0; i < keys.Length; i++)
             {
-                st.Put(keys[i], i);
+                this.st.Put(keys[i], i);
             }
 
             string[] expectedKeys = { "A", "C", "E", "H", "L", "M", "P", "R", "S", "X" };
@@ -28,7 +28,7 @@
 
             for (int i = 0; i < expectedKeys.Length; i++)
             {
-                Assert.AreEqual(expectedValues[i], st.Get(expectedKeys[i]));
+                Assert.AreEqual(expectedValues[i], this.st.Get(expectedKeys[i]));
             }
         }
     }

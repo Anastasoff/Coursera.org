@@ -92,7 +92,7 @@
             int high = this.n - 1;
             while (low <= high)
             {
-                int middle = low + (high - low) / 2;
+                int middle = low + ((high - low) / 2);
                 int cmp = key.CompareTo(this.keys[middle]);
                 if (cmp < 0)
                 {

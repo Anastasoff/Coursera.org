@@ -252,7 +252,7 @@
                 return default(Key);
             }
 
-            return Min(this.root).Key;
+            return this.Min(this.root).Key;
         }
 
         private Node Min(Node x)
