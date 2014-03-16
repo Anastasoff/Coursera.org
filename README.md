@@ -39,3 +39,6 @@ Coursera.org
   - [PriorityQueue] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/07.PriorityQueues/PriorityQueue/PriorityQueue.cs)
   - [HeapSort] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/07.PriorityQueues/HeapSort/Heap.cs)
 8. <b>[Elementary Symbol Tables] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/08.ElementarySymbolTables)</b>
+  - [SequentialSearchST] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/08.ElementarySymbolTables/SymbolTables/SequentialSearchST.cs)
+  - [BinarySearchST] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/08.ElementarySymbolTables/SymbolTables/BinarySearchST.cs)
+  - [BinarySearchTree] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/08.ElementarySymbolTables/SymbolTables/BinarySearchTree.cs)
