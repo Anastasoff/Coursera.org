@@ -6,7 +6,8 @@
     /// <summary>
     /// Symbol table implementation with binary search in an ordered array.
     /// </summary>
-    public class BinarySearchST<Key, Value> where Key : IComparable<Key>
+    public class BinarySearchST<Key, Value> : ISymbolTable<Key, Value>
+        where Key : IComparable<Key>
     {
         private const int CAPACITY = 2;
         private Key[] keys;

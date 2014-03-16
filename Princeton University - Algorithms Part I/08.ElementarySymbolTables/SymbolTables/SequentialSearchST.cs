@@ -5,7 +5,7 @@
     /// <summary>
     /// The SequentialSearchST class represents an (unordered) symbol table of generic key-value pairs.
     /// </summary>
-    public class SequentialSearchST<Key, Value>
+    public class SequentialSearchST<Key, Value> : ISymbolTable<Key, Value>
     {
         private int n;      // number of key-value pairs
         private Node first; // the linked list of key-value pairs

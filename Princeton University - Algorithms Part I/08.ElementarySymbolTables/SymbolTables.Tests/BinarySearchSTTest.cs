@@ -3,20 +3,20 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class SequentialSearchSTTest
+    public class BinarySearchSTTest
     {
-        private SequentialSearchST<string, int> st;
+        private ISymbolTable<string, int> st;
 
         [TestMethod]
-        public void TestInitializeSequentialSearchST()
+        public void TestInitializeBinarySearchST()
         {
-            this.st = new SequentialSearchST<string, int>();
+            this.st = new BinarySearchST<string, int>();
         }
 
         [TestMethod]
-        public void TestSequentialSearchSTTrace()
+        public void TestBinarySearchSTTrace()
         {
-            this.st = new SequentialSearchST<string, int>();
+            this.st = new BinarySearchST<string, int>();
             string[] keys = { "S", "E", "A", "R", "C", "H", "E", "X", "A", "M", "P", "L", "E" };
             for (int i = 0; i < keys.Length; i++)
             {
