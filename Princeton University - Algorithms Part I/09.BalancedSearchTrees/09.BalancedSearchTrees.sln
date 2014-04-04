@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BalancedSearchTrees", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00.Tester", "Tester\00.Tester.csproj", "{E16978C5-9FFA-476D-AB7E-66C1C511DFED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalancedSearchTrees.Tests", "BalancedSearchTrees.Tests\BalancedSearchTrees.Tests.csproj", "{3932DE39-94A6-4241-9B73-6B16AB9370E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BalancedSearchTrees.Tests", "BalancedSearchTrees.Tests\01.BalancedSearchTrees.Tests.csproj", "{3932DE39-94A6-4241-9B73-6B16AB9370E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
