@@ -42,3 +42,5 @@ Coursera.org
   - [SequentialSearchST] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/08.ElementarySymbolTables/SymbolTables/SequentialSearchST.cs)
   - [BinarySearchST] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/08.ElementarySymbolTables/SymbolTables/BinarySearchST.cs)
   - [BinarySearchTree] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/08.ElementarySymbolTables/SymbolTables/BinarySearchTree.cs)
+9. <b>[Balanced Search Trees] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/09.BalancedSearchTrees)</b>
+  - [RedBlackBST] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/09.BalancedSearchTrees/BalancedSearchTrees/RedBlackBST.cs)
