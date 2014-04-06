@@ -1,6 +1,7 @@
 ﻿namespace BalancedSearchTrees
 {
     using System;
+    using System.Collections.Generic;
 
     /// <summary>
     /// A symbol table implemented using a left-leaning red-black BST.
@@ -683,7 +684,70 @@
 
         #region Range count and range search
 
-        // TODO: implement => Keys(), Size()
+        /// <summary>
+        /// All of the keys, as an IEnumerable
+        /// </summary>
+        public IEnumerable<Key> Keys()
+        {
+            return this.Keys(this.Min(), this.Max());
+        }
+
+        /// <summary>
+        /// The keys between low and high, as an IEnumerable
+        /// </summary>
+        public IEnumerable<Key> Keys(Key low, Key high)
+        {
+            Queue<Key> queue = new Queue<Key>();
+            this.Keys(this.root, queue, low, high);
+            return queue;
+        }
+
+        // Add the keys between lo and hi in the subtree rooted at x to the queue
+        private void Keys(Node x, Queue<Key> queue, Key low, Key high)
+        {
+            if (x == null)
+            {
+                return;
+            }
+
+            int cmpLow = low.CompareTo(x.Key);
+            int cmpHigh = high.CompareTo(x.Key);
+
+            if (cmpLow < 0)
+            {
+                this.Keys(x.Left, queue, low, high);
+            }
+
+            if (cmpLow <= 0 && cmpHigh >= 0)
+            {
+                queue.Enqueue(x.Key);
+            }
+
+            if (cmpHigh > 0)
+            {
+                this.Keys(x.Right, queue, low, high);
+            }
+        }
+
+        /// <summary>
+        /// Number keys between low and high
+        /// </summary>
+        public int Size(Key low, Key high)
+        {
+            if (low.CompareTo(high) > 0)
+            {
+                return 0;
+            }
+
+            if (this.Contains(high))
+            {
+                return this.Rank(high) - this.Rank(low) + 1;
+            }
+            else
+            {
+                return this.Rank(high) - this.Rank(low);
+            }
+        }
 
         #endregion Range count and range search
     }
