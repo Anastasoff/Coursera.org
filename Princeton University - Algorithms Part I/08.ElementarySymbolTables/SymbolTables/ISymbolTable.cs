@@ -5,27 +5,27 @@
     /// <summary>
     /// Basic symbol table API.
     /// </summary>
-    public interface ISymbolTable<Key, Value>
+    public interface ISymbolTable<TKey, TValue>
     {
         /// <summary>
         /// Put key-value pair into the table (remove key from table if value is null)
         /// </summary>
-        void Put(Key key, Value value);
+        void Put(TKey key, TValue value);
 
         /// <summary>
         /// Value paired with key (null if key is absent)
         /// </summary>
-        Value Get(Key key);
+        TValue Get(TKey key);
 
         /// <summary>
         /// Remove key (and its value) from table
         /// </summary>
-        void Delete(Key key);
+        void Delete(TKey key);
 
         /// <summary>
         /// Is there a value paired with key?
         /// </summary>
-        bool Contains(Key key);
+        bool Contains(TKey key);
 
         /// <summary>
         /// Is the table empty?
@@ -40,6 +40,6 @@
         /// <summary>
         /// All the keys in the table.
         /// </summary>
-        IEnumerable<Key> Keys();
+        IEnumerable<TKey> Keys();
     }
 }

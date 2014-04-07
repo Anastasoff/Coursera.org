@@ -52,7 +52,7 @@
             PrintOutput(st);
         }
 
-        public static void PrintOutput<Key, Value>(ISymbolTable<Key, Value> st)
+        public static void PrintOutput<TKey, TValue>(ISymbolTable<TKey, TValue> st)
         {
             Console.Write("| Actual |");
             Console.WriteLine("Expected|");

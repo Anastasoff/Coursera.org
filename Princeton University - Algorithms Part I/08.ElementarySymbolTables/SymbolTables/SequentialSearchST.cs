@@ -5,7 +5,7 @@
     /// <summary>
     /// The SequentialSearchST class represents an (unordered) symbol table of generic key-value pairs.
     /// </summary>
-    public class SequentialSearchST<Key, Value> : ISymbolTable<Key, Value>
+    public class SequentialSearchST<TKey, TValue> : ISymbolTable<TKey, TValue>
     {
         private int n;      // number of key-value pairs
         private Node first; // the linked list of key-value pairs
@@ -13,16 +13,16 @@
         // A helper linked list data type
         private class Node
         {
-            public Node(Key key, Value value, Node next)
+            public Node(TKey key, TValue value, Node next)
             {
                 this.Key = key;
                 this.Value = value;
                 this.Next = next;
             }
 
-            public Key Key { get; set; }
+            public TKey Key { get; set; }
 
-            public Value Value { get; set; }
+            public TValue Value { get; set; }
 
             public Node Next { get; set; }
         }
@@ -57,7 +57,7 @@
         /// </summary>
         /// <param name="key">key the key</param>
         /// <returns>True if the symbol table contains key and false otherwise.</returns>
-        public bool Contains(Key key)
+        public bool Contains(TKey key)
         {
             return this.Get(key) != null;
         }
@@ -70,7 +70,7 @@
         /// The value associated with the given key if the key is in the symbol table
         /// and null if the key is not in the symbol table
         /// </returns>
-        public Value Get(Key key)
+        public TValue Get(TKey key)
         {
             for (Node x = this.first; x != null; x = x.Next)
             {
@@ -80,7 +80,7 @@
                 }
             }
 
-            return default(Value);
+            return default(TValue);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@
         /// </summary>
         /// <param name="key">key the key</param>
         /// <param name="value">value the value</param>
-        public void Put(Key key, Value value)
+        public void Put(TKey key, TValue value)
         {
             if (value == null)
             {
@@ -115,7 +115,7 @@
         /// Removes the key and associated value from the symbol table (if the key is in the symbol table).
         /// </summary>
         /// <param name="key">key the key</param>
-        public void Delete(Key key)
+        public void Delete(TKey key)
         {
             this.first = this.Delete(this.first, key);
         }
@@ -126,9 +126,9 @@
         /// use the foreach notation: for (Key key : st.keys()).
         /// </summary>
         /// <returns>All keys in the symbol table as an IEnumerable</returns>
-        public IEnumerable<Key> Keys()
+        public IEnumerable<TKey> Keys()
         {
-            Queue<Key> queue = new Queue<Key>();
+            Queue<TKey> queue = new Queue<TKey>();
             for (Node x = this.first; x != null; x = x.Next)
             {
                 queue.Enqueue(x.Key);
@@ -139,7 +139,7 @@
 
         // Delete key in linked list beginning at Node x
         // WARNING: method call stack too large if table is large
-        private Node Delete(Node x, Key key)
+        private Node Delete(Node x, TKey key)
         {
             if (x == null)
             {

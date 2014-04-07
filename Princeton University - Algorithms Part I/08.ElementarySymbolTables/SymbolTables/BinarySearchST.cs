@@ -6,12 +6,12 @@
     /// <summary>
     /// Symbol table implementation with binary search in an ordered array.
     /// </summary>
-    public class BinarySearchST<Key, Value> : ISymbolTable<Key, Value>
-        where Key : IComparable<Key>
+    public class BinarySearchST<TKey, TValue> : ISymbolTable<TKey, TValue>
+        where TKey : IComparable<TKey>
     {
         private const int CAPACITY = 2;
-        private Key[] keys;
-        private Value[] values;
+        private TKey[] keys;
+        private TValue[] values;
         private int n;
 
         /// <summary>
@@ -28,8 +28,8 @@
         /// <param name="capacity">capacity the capacity</param>
         public BinarySearchST(int capacity)
         {
-            this.keys = new Key[capacity];
-            this.values = new Value[capacity];
+            this.keys = new TKey[capacity];
+            this.values = new TValue[capacity];
         }
 
         /// <summary>
@@ -37,7 +37,7 @@
         /// </summary>
         /// <param name="key">key the key</param>
         /// <returns></returns>
-        public bool Contains(Key key)
+        public bool Contains(TKey key)
         {
             return this.Get(key) != null;
         }
@@ -65,11 +65,11 @@
         /// </summary>
         /// <param name="key">key the key</param>
         /// <returns></returns>
-        public Value Get(Key key)
+        public TValue Get(TKey key)
         {
             if (this.IsEmpty())
             {
-                return default(Value);
+                return default(TValue);
             }
 
             int i = this.Rank(key);
@@ -78,7 +78,7 @@
                 return this.values[i];
             }
 
-            return default(Value);
+            return default(TValue);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        public int Rank(Key key)
+        public int Rank(TKey key)
         {
             int low = 0;
             int high = this.n - 1;
@@ -116,7 +116,7 @@
         /// </summary>
         /// <param name="key"></param>
         /// <param name="value"></param>
-        public void Put(Key key, Value value)
+        public void Put(TKey key, TValue value)
         {
             if (value == null)
             {
@@ -154,7 +154,7 @@
         /// Remove the key-value pair if present
         /// </summary>
         /// <param name="key"></param>
-        public void Delete(Key key)
+        public void Delete(TKey key)
         {
             if (this.IsEmpty())
             {
@@ -177,8 +177,8 @@
             }
 
             this.n--;
-            this.keys[this.n] = default(Key); // to avoid loitering
-            this.values[this.n] = default(Value);
+            this.keys[this.n] = default(TKey); // to avoid loitering
+            this.values[this.n] = default(TValue);
 
             // resize if 1/4 full
             if (this.n > 0 && this.n == this.keys.Length / 4)
@@ -215,37 +215,37 @@
 
         #region Ordered symbol table methods
 
-        public Key Min()
+        public TKey Min()
         {
             if (this.IsEmpty())
             {
-                return default(Key);
+                return default(TKey);
             }
 
             return this.keys[0];
         }
 
-        public Key Max()
+        public TKey Max()
         {
             if (this.IsEmpty())
             {
-                return default(Key);
+                return default(TKey);
             }
 
             return this.keys[this.n - 1];
         }
 
-        public Key Select(int k)
+        public TKey Select(int k)
         {
             if (k < 0 || k >= this.n)
             {
-                return default(Key);
+                return default(TKey);
             }
 
             return this.keys[k];
         }
 
-        public Key Floor(Key key)
+        public TKey Floor(TKey key)
         {
             int i = this.Rank(key);
             if (i < this.n && key.CompareTo(this.keys[i]) == 0)
@@ -255,7 +255,7 @@
 
             if (i == 0)
             {
-                return default(Key);
+                return default(TKey);
             }
             else
             {
@@ -263,12 +263,12 @@
             }
         }
 
-        public Key Ceiling(Key key)
+        public TKey Ceiling(TKey key)
         {
             int i = this.Rank(key);
             if (i == this.n)
             {
-                return default(Key);
+                return default(TKey);
             }
             else
             {
@@ -276,7 +276,7 @@
             }
         }
 
-        public int Size(Key low, Key high)
+        public int Size(TKey low, TKey high)
         {
             if (low.CompareTo(high) > 0)
             {
@@ -293,14 +293,14 @@
             }
         }
 
-        public IEnumerable<Key> Keys()
+        public IEnumerable<TKey> Keys()
         {
             return this.Keys(this.Min(), this.Max());
         }
 
-        public IEnumerable<Key> Keys(Key low, Key high)
+        public IEnumerable<TKey> Keys(TKey low, TKey high)
         {
-            Queue<Key> queue = new Queue<Key>();
+            Queue<TKey> queue = new Queue<TKey>();
             if (low == null && high == null)
             {
                 return queue;
@@ -344,8 +344,8 @@
                 throw new ArgumentOutOfRangeException("Cannot shrink the array.");
             }
 
-            Key[] tempK = new Key[capacity];
-            Value[] tempV = new Value[capacity];
+            TKey[] tempK = new TKey[capacity];
+            TValue[] tempV = new TValue[capacity];
             for (int i = 0; i < this.n; i++)
             {
                 tempK[i] = this.keys[i];

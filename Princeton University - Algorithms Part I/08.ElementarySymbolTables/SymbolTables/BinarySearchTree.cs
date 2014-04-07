@@ -6,22 +6,22 @@
     /// <summary>
     /// A symbol table implemented with a binary search tree.
     /// </summary>
-    public class BinarySearchTree<Key, Value> : ISymbolTable<Key, Value> where Key : IComparable<Key>
+    public class BinarySearchTree<TKey, TValue> : ISymbolTable<TKey, TValue> where TKey : IComparable<TKey>
     {
         private Node root; // root of Binary Search Tree
 
         private class Node
         {
-            public Node(Key key, Value value, int n)
+            public Node(TKey key, TValue value, int n)
             {
                 this.Key = key;
                 this.Value = value;
                 this.N = n;
             }
 
-            public Key Key { get; set; }
+            public TKey Key { get; set; }
 
-            public Value Value { get; set; }
+            public TValue Value { get; set; }
 
             public Node Left { get; set; }
 
@@ -67,7 +67,7 @@
         /// <summary>
         /// Does there exist a key-value pair with given key?
         /// </summary>
-        public bool Contains(Key key)
+        public bool Contains(TKey key)
         {
             return this.Get(key) != null;
         }
@@ -75,16 +75,16 @@
         /// <summary>
         /// Return value associated with the given key, or null if no such key exists.
         /// </summary>
-        public Value Get(Key key)
+        public TValue Get(TKey key)
         {
             return this.Get(this.root, key);
         }
 
-        private Value Get(Node x, Key key)
+        private TValue Get(Node x, TKey key)
         {
             if (x == null)
             {
-                return default(Value);
+                return default(TValue);
             }
 
             int cmp = key.CompareTo(x.Key);
@@ -108,7 +108,7 @@
          *  If key already exists, update with new value
          ***********************************************************************/
 
-        public void Put(Key key, Value value)
+        public void Put(TKey key, TValue value)
         {
             if (value == null)
             {
@@ -119,7 +119,7 @@
             this.root = this.Put(this.root, key, value);
         }
 
-        private Node Put(Node x, Key key, Value value)
+        private Node Put(Node x, TKey key, TValue value)
         {
             if (x == null)
             {
@@ -196,12 +196,12 @@
             return x;
         }
 
-        public void Delete(Key key)
+        public void Delete(TKey key)
         {
             this.root = this.Delete(this.root, key);
         }
 
-        private Node Delete(Node x, Key key)
+        private Node Delete(Node x, TKey key)
         {
             if (x == null)
             {
@@ -245,11 +245,11 @@
          *  Min, max, floor, and ceiling
          ***********************************************************************/
 
-        public Key Min()
+        public TKey Min()
         {
             if (this.IsEmpty())
             {
-                return default(Key);
+                return default(TKey);
             }
 
             return this.Min(this.root).Key;
@@ -267,11 +267,11 @@
             }
         }
 
-        public Key Max()
+        public TKey Max()
         {
             if (this.IsEmpty())
             {
-                return default(Key);
+                return default(TKey);
             }
 
             return this.Max(this.root).Key;
@@ -289,12 +289,12 @@
             }
         }
 
-        public Key Floor(Key key)
+        public TKey Floor(TKey key)
         {
             Node x = this.Floor(this.root, key);
             if (x == null)
             {
-                return default(Key);
+                return default(TKey);
             }
             else
             {
@@ -302,7 +302,7 @@
             }
         }
 
-        private Node Floor(Node x, Key key)
+        private Node Floor(Node x, TKey key)
         {
             if (x == null)
             {
@@ -333,12 +333,12 @@
             }
         }
 
-        public Key Ceiling(Key key)
+        public TKey Ceiling(TKey key)
         {
             Node x = this.Ceiling(this.root, key);
             if (x == null)
             {
-                return default(Key);
+                return default(TKey);
             }
             else
             {
@@ -346,7 +346,7 @@
             }
         }
 
-        private Node Ceiling(Node x, Key key)
+        private Node Ceiling(Node x, TKey key)
         {
             if (x == null)
             {
@@ -380,11 +380,11 @@
          *  Rank and selection
          ***********************************************************************/
 
-        public Key Select(int k)
+        public TKey Select(int k)
         {
             if (k < 0 || k >= this.Size())
             {
-                return default(Key);
+                return default(TKey);
             }
 
             Node x = this.Select(this.root, k);
@@ -414,12 +414,12 @@
             }
         }
 
-        public int Rank(Key key)
+        public int Rank(TKey key)
         {
             return this.Rank(key, this.root);
         }
 
-        private int Rank(Key key, Node x)
+        private int Rank(TKey key, Node x)
         {
             if (x == null)
             {
@@ -446,19 +446,19 @@
          *  Range count and range search.
          ***********************************************************************/
 
-        public IEnumerable<Key> Keys()
+        public IEnumerable<TKey> Keys()
         {
             return this.Keys(this.Min(), this.Max());
         }
 
-        public IEnumerable<Key> Keys(Key low, Key high)
+        public IEnumerable<TKey> Keys(TKey low, TKey high)
         {
-            Queue<Key> queue = new Queue<Key>();
+            Queue<TKey> queue = new Queue<TKey>();
             this.Keys(this.root, queue, low, high);
             return queue;
         }
 
-        private void Keys(Node x, Queue<Key> queue, Key low, Key high)
+        private void Keys(Node x, Queue<TKey> queue, TKey low, TKey high)
         {
             if (x == null)
             {
@@ -484,7 +484,7 @@
             }
         }
 
-        public int Size(Key low, Key high)
+        public int Size(TKey low, TKey high)
         {
             if (low.CompareTo(high) > 0)
             {
@@ -522,9 +522,9 @@
         /// <summary>
         /// Level order traversal
         /// </summary>
-        public IEnumerable<Key> LevelOrder()
+        public IEnumerable<TKey> LevelOrder()
         {
-            Queue<Key> keys = new Queue<Key>();
+            Queue<TKey> keys = new Queue<TKey>();
             Queue<Node> queue = new Queue<Node>();
             queue.Enqueue(this.root);
 
