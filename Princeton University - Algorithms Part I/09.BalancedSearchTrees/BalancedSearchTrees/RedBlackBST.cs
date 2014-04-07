@@ -50,7 +50,7 @@
                 return false;
             }
 
-            return (x.Color == RED);
+            return x.Color == RED;
         }
 
         // Number of node is subtree rooted at x; 0 if x is null
@@ -60,6 +60,7 @@
             {
                 return 0;
             }
+
             return x.N;
         }
 
@@ -72,7 +73,7 @@
         /// </summary>
         public int Size()
         {
-            return this.Size(root);
+            return this.Size(this.root);
         }
 
         /// <summary>
@@ -92,7 +93,7 @@
         /// </summary>
         public Value Get(Key key)
         {
-            return this.Get(root, key);
+            return this.Get(this.root, key);
         }
 
         // value associated with the given key in subtree rooted at x; null if no such key
@@ -124,13 +125,13 @@
         /// </summary>
         public bool Contains(Key key)
         {
-            return (this.Get(key) != null);
+            return this.Get(key) != null;
         }
 
         // Is there a key-value pair with the given key in the subtree rooted at x?
         private bool Contains(Node x, Key key)
         {
-            return (this.Get(x, key) != null);
+            return this.Get(x, key) != null;
         }
 
         #endregion Standard BST search
@@ -142,7 +143,7 @@
         /// </summary>
         public void Put(Key key, Value value)
         {
-            this.root = this.Put(root, key, value);
+            this.root = this.Put(this.root, key, value);
             this.root.Color = BLACK;
         }
 

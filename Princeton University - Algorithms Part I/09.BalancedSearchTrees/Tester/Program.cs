@@ -1,12 +1,14 @@
-﻿using BalancedSearchTrees;
-using System;
-
-namespace Tester
+﻿namespace Tester
 {
+    using System;
+
+    using BalancedSearchTrees;
+
     internal class Program
     {
         private static void Main(string[] args)
         {
+            // TODO: fix bug in BTree => Insert()
             BTree<string, string> st = new BTree<string, string>();
 
             st.Put("www.cs.princeton.edu", "128.112.136.11");

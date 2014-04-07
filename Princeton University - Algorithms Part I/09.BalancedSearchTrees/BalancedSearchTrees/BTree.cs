@@ -22,7 +22,7 @@
             internal Node(int k)
             {
                 this.M = k;
-                this.Children = new Entry[M];
+                this.Children = new Entry[this.M];
             }
 
             public int M { get; set; }              // number of children
@@ -100,7 +100,7 @@
             {
                 for (int j = 0; j < x.M; j++)
                 {
-                    if (j + 1 == x.M || this.Less(key, children[j + 1].Key)) // ! bad type casting
+                    if (j + 1 == x.M || this.Less(key, children[j + 1].Key))
                     {
                         return this.Search(children[j].Next, key, ht - 1);
                     }
@@ -147,7 +147,7 @@
                     }
                 }
             }
-            // internal node
+            //// internal node
             else
             {
                 for (j = 0; j < h.M; j++)
@@ -172,7 +172,7 @@
                 h.Children[i] = h.Children[i - 1];
             }
 
-            h.Children[j] = t;
+            h.Children[j] = t; // TODO: bug !
             h.M++;
             if (h.M < Max)
             {
@@ -191,7 +191,7 @@
             h.M = Max / 2;
             for (int j = 0; j < Max / 2; j++)
             {
-                t.Children[j] = h.Children[Max / 2 + j];
+                t.Children[j] = h.Children[(Max / 2) + j];
             }
 
             return t;
@@ -199,15 +199,15 @@
 
         private bool Less(IComparable<Key> k1, IComparable<Key> k2)
         {
-            return k1.CompareTo((Key)k2) < 0;
+            return k1.CompareTo((Key)k2) < 0; // TODO: bad type casting
         }
 
         public override string ToString()
         {
-            return this.ToString(this.root, this.ht, "") + "\r\n";
+            return this.ToString(this.root, this.ht, string.Empty) + Environment.NewLine;
         }
 
-        private String ToString(Node h, int ht, string indent)
+        private string ToString(Node h, int ht, string indent)
         {
             string s = string.Empty;
             Entry[] children = h.Children;
