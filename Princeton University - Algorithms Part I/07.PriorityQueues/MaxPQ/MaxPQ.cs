@@ -7,11 +7,11 @@
     /// <summary>
     /// The MaxPQ class represents a priority queue of generic keys.
     /// </summary>
-    public class MaxPQ<Key> : IEnumerable<Key> where Key : IComparable<Key>
+    public class MaxPQ<TKey> : IEnumerable<TKey> where TKey : IComparable<TKey>
     {
-        private Key[] pq;                    // store items at indexes 1 to N
+        private TKey[] pq;                    // store items at indexes 1 to N
         private int n;                       // number of items on priority queue
-        private IComparable<Key> comparator; // optional Comparator
+        private IComparable<TKey> comparator; // optional Comparator
 
         /// <summary>
         /// Initializes an empty priority queue with the given initial capacity.
@@ -19,7 +19,7 @@
         /// <param name="initCapacity">The initial capacity of the priority queue.</param>
         public MaxPQ(int initCapacity)
         {
-            this.pq = new Key[initCapacity + 1];
+            this.pq = new TKey[initCapacity + 1];
             this.n = 0;
         }
 
@@ -36,7 +36,7 @@
         /// </summary>
         /// <param name="initCapacity">The initial capacity of the priority queue.</param>
         /// <param name="comparator">The order in which to compare the keys.</param>
-        public MaxPQ(int initCapacity, IComparable<Key> comparator)
+        public MaxPQ(int initCapacity, IComparable<TKey> comparator)
             : this(initCapacity)
         {
             this.comparator = comparator;
@@ -46,7 +46,7 @@
         /// Initializes an empty priority queue using the given comparator.
         /// </summary>
         /// <param name="comparator">The order in which to compare the keys.</param>
-        public MaxPQ(IComparable<Key> comparator)
+        public MaxPQ(IComparable<TKey> comparator)
             : this(1, comparator)
         {
         }
@@ -56,10 +56,10 @@
         /// Takes time proportional to the number of keys, using sink-based heap construction.
         /// </summary>
         /// <param name="keys">The array of keys.</param>
-        public MaxPQ(Key[] keys)
+        public MaxPQ(TKey[] keys)
         {
             this.n = keys.Length;
-            this.pq = new Key[keys.Length + 1];
+            this.pq = new TKey[keys.Length + 1];
             for (int i = 0; i < this.n; i++)
             {
                 this.pq[i + 1] = keys[i];
@@ -94,7 +94,7 @@
         /// </summary>
         /// <returns>Largest key on the priority queue.</returns>
         /// <exception cref="ArgumentException">Priority queue underflow.</exception>
-        public Key Max()
+        public TKey Max()
         {
             if (this.IsEmpty())
             {
@@ -108,7 +108,7 @@
         /// Adds a new key to the priority queue.
         /// </summary>
         /// <param name="x">The new key to add to the priority queue.</param>
-        public void Insert(Key x)
+        public void Insert(TKey x)
         {
             // double size of the array if necessary
             if (this.n >= this.pq.Length - 1)
@@ -126,17 +126,17 @@
         /// </summary>
         /// <returns>Largest key on the priority queue.</returns>
         /// <exception cref="ArgumentException">Priority queue underflow.</exception>
-        public Key DeleteMax()
+        public TKey DeleteMax()
         {
             if (this.IsEmpty())
             {
                 throw new ArgumentException("Priority queue underflow.");
             }
 
-            Key max = this.pq[1];
+            TKey max = this.pq[1];
             this.Swap(1, this.n--);
             this.Swim(1);
-            this.pq[this.n + 1] = default(Key); // to avoid loitering and help with garbage collection
+            this.pq[this.n + 1] = default(TKey); // to avoid loitering and help with garbage collection
             if ((this.n > 0) && (this.n == (this.pq.Length - 1) / 4))
             {
                 this.Resize(this.pq.Length / 2);
@@ -145,7 +145,7 @@
             return max;
         }
 
-        public IEnumerator<Key> GetEnumerator()
+        public IEnumerator<TKey> GetEnumerator()
         {
             for (int i = 1; i <= this.n; i++)
             {
@@ -166,7 +166,7 @@
                 throw new ArgumentOutOfRangeException("Cannot shrink the array.");
             }
 
-            Key[] temp = new Key[capacity];
+            TKey[] temp = new TKey[capacity];
             for (int i = 1; i <= this.n; i++)
             {
                 temp[i] = this.pq[i];
@@ -225,7 +225,7 @@
 
         private void Swap(int i, int j)
         {
-            Key swap = this.pq[i];
+            TKey swap = this.pq[i];
             this.pq[i] = this.pq[j];
             this.pq[j] = swap;
         }
