@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BalancedSearchTrees", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00.Tester", "Tester\00.Tester.csproj", "{E16978C5-9FFA-476D-AB7E-66C1C511DFED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BalancedSearchTrees.Tests", "BalancedSearchTrees.Tests\01.BalancedSearchTrees.Tests.csproj", "{3932DE39-94A6-4241-9B73-6B16AB9370E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BalancedSearchTrees.Test", "BalancedSearchTrees.Test\01.BalancedSearchTrees.Test.csproj", "{AF63F120-7B35-431E-ACE9-7BA356A334A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{E16978C5-9FFA-476D-AB7E-66C1C511DFED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E16978C5-9FFA-476D-AB7E-66C1C511DFED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E16978C5-9FFA-476D-AB7E-66C1C511DFED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3932DE39-94A6-4241-9B73-6B16AB9370E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3932DE39-94A6-4241-9B73-6B16AB9370E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3932DE39-94A6-4241-9B73-6B16AB9370E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3932DE39-94A6-4241-9B73-6B16AB9370E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF63F120-7B35-431E-ACE9-7BA356A334A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF63F120-7B35-431E-ACE9-7BA356A334A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF63F120-7B35-431E-ACE9-7BA356A334A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF63F120-7B35-431E-ACE9-7BA356A334A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
