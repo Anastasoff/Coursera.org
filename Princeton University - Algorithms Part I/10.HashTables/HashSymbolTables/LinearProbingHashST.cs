@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace HashSymbolTables
+﻿namespace HashSymbolTables
 {
+    using System.Collections.Generic;
+
     public class LinearProbingHashST<TKey, TValue>
     {
         private const int INIT_CAPACITY = 4;
