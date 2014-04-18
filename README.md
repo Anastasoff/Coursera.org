@@ -46,3 +46,5 @@ Coursera.org
   - [RedBlackBST] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/09.BalancedSearchTrees/BalancedSearchTrees/RedBlackBST.cs)
   - [BTree] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/09.BalancedSearchTrees/BalancedSearchTrees/BTree.cs)
 10. <b>[Hash Tables] (https://github.com/Anastasoff/Coursera.org/tree/master/Princeton%20University%20-%20Algorithms%20Part%20I/10.HashTables)</b>
+  - [LinearProbingHashST] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/10.HashTables/HashSymbolTables/LinearProbingHashST.cs)
+  - [SeparateChainingHashST] (https://github.com/Anastasoff/Coursera.org/blob/master/Princeton%20University%20-%20Algorithms%20Part%20I/10.HashTables/HashSymbolTables/SeparateChainingHashST.cs)
