@@ -60,7 +60,7 @@
         /// <returns></returns>
         private int Hash(TKey key)
         {
-            return (key.GetHashCode() & 0x7fffffff) & this.m;
+            return (key.GetHashCode() & 0x7fffffff) % this.m;
         }
 
         // Resize the hash table to the given capacity by re-hashing all of the keys
